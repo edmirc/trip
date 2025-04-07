@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'trip',
-        'USER': 'root',
+        'USER': 'root',#environ.get('MYSQL_USER')
         'PASSWORD': environ.get('MYSQL_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '3306',
