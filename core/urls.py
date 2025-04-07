@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from expenses.views import CarView, CitysViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('car/', CarView.as_view(), name='car'),
+    path('city/', CitysViews.as_view(), name='city'),
 ]
 
 

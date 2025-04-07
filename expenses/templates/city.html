@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidades</title>
+</head>
+<body>
+    <form action="{% url 'car' %}" method="post">
+        {% csrf_token %}
+        <h1>Cidades</h1>
+        <label for="model">Modelo</label>
+        {{ form.as_p }}
+       
+    </form>
+</body>
+</html>
