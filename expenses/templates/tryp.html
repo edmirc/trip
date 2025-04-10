@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viagens</title>
+    <link rel="stylesheet" href="{% static 'css/form-styles.css' %}" />
+  </head>
+  <body>
+    <div class="div-container">
+      <form action="{% url 'car' %}" method="post">
+        {% csrf_token %}
+        <h1>Viagens</h1>
+        {{ form}}
+      </form>
+    </div>
+  </body>
+</html>

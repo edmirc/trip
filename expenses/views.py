@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from expenses.models import Car, Citys
+from expenses.models import Car, Citys, Tryp
 
-from expenses.forms import CarForm, CityForm
+from expenses.forms import CarForm, CityForm, TrypForm
 from django.views.generic import FormView 
 
 
@@ -27,4 +27,8 @@ class CitysViews(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
-
+    
+class TripViews(FormView):
+    template_name = 'tryp.html'
+    form_class = TrypForm
+    success_url = '/trip/'
