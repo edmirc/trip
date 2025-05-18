@@ -81,11 +81,10 @@ DATABASES = {
         'NAME': 'trip',
         'USER': environ.get('MYSQL_USER'),
         'PASSWORD': environ.get('MYSQL_PASSWORD'),
-        'HOST': 'localhost',
+        'HOST': '192.168.3.198',
         'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
